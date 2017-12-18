@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		03ABE27BD326398346CD619F /* Pods_realmMiniClinic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4ED0492F480F961337B179 /* Pods_realmMiniClinic.framework */; };
 		0F52BE974FF5F8C3C8C506EB /* Pods_realmMiniClinicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C615F4CCB2C3E43501E5861D /* Pods_realmMiniClinicTests.framework */; };
-		3879A4341FBEFA0C00C2B1B3 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3879A4331FBEFA0C00C2B1B3 /* Objects.swift */; };
+		380CF61D1FE745A60089BAF6 /* Practitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF61C1FE745A60089BAF6 /* Practitioner.swift */; };
+		380CF61F1FE745AE0089BAF6 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF61E1FE745AE0089BAF6 /* Patient.swift */; };
+		380CF6211FE745B90089BAF6 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6201FE745B90089BAF6 /* Practice.swift */; };
 		38C892F61FBC3FBA008842B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F51FBC3FBA008842B5 /* AppDelegate.swift */; };
 		38C892F81FBC3FBA008842B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F71FBC3FBA008842B5 /* ViewController.swift */; };
 		38C892FB1FBC3FBA008842B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C892F91FBC3FBA008842B5 /* Main.storyboard */; };
@@ -38,7 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3879A4331FBEFA0C00C2B1B3 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		380CF61C1FE745A60089BAF6 /* Practitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practitioner.swift; sourceTree = "<group>"; };
+		380CF61E1FE745AE0089BAF6 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		380CF6201FE745B90089BAF6 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		38B49CFF1FC0502F001A6426 /* realmMiniClinic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = realmMiniClinic.entitlements; sourceTree = "<group>"; };
 		38C892F21FBC3FBA008842B5 /* realmMiniClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realmMiniClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C892F51FBC3FBA008842B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 		3879A42C1FBEED7300C2B1B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3879A4331FBEFA0C00C2B1B3 /* Objects.swift */,
+				380CF61C1FE745A60089BAF6 /* Practitioner.swift */,
+				380CF61E1FE745AE0089BAF6 /* Patient.swift */,
+				380CF6201FE745B90089BAF6 /* Practice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,9 +500,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3879A4341FBEFA0C00C2B1B3 /* Objects.swift in Sources */,
+				380CF6211FE745B90089BAF6 /* Practice.swift in Sources */,
+				380CF61D1FE745A60089BAF6 /* Practitioner.swift in Sources */,
 				38C892F81FBC3FBA008842B5 /* ViewController.swift in Sources */,
 				38C892F61FBC3FBA008842B5 /* AppDelegate.swift in Sources */,
+				380CF61F1FE745AE0089BAF6 /* Patient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

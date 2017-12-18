@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdb-fx-Enj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdb-fx-Enj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,9 +130,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtH-wJ-6kA">
                                         <rect key="frame" x="47.5" y="26.5" width="125" height="30"/>
                                         <state key="normal" title="I am a Practitioner"/>
-                                        <connections>
-                                            <segue destination="TZb-3k-eI5" kind="show" id="Pov-mX-mxn"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wuc-ui-K74">
                                         <rect key="frame" x="63.5" y="62.5" width="93" height="30"/>
@@ -155,33 +152,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8S9-ot-P7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-751.20000000000005" y="-930.58470764617698"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bb1-vG-bDm">
-            <objects>
-                <viewController id="TZb-3k-eI5" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YSv-ta-8UR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Te0-fv-pss">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pac-ZM-kT7" firstAttribute="trailing" secondItem="Te0-fv-pss" secondAttribute="trailing" id="6LE-FV-WUe"/>
-                            <constraint firstItem="pac-ZM-kT7" firstAttribute="bottom" secondItem="Te0-fv-pss" secondAttribute="bottom" id="GTJ-Fh-iMa"/>
-                            <constraint firstItem="Te0-fv-pss" firstAttribute="top" secondItem="pac-ZM-kT7" secondAttribute="top" id="NdV-FD-kmj"/>
-                            <constraint firstItem="Te0-fv-pss" firstAttribute="leading" secondItem="pac-ZM-kT7" secondAttribute="leading" id="hex-yB-qcA"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="pac-ZM-kT7"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KdT-0y-5DZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-550" y="-133"/>
         </scene>
         <!--New Patient Sign Up-->
         <scene sceneID="kP6-Lo-Xw2">
@@ -327,6 +297,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6x-Va-MIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="-954.87256371814101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kej-6f-mDK">
+            <objects>
+                <viewController id="69f-wK-ib7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a9O-yH-POP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xIE-Lo-WW1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTv-ea-hBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3540" y="-1003"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wHI-WN-kTE">
