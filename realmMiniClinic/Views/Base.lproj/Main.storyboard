@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sdb-fx-Enj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="69f-wK-ib7">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="login" id="BYZ-38-t0r" customClass="ViewController" customModule="realmMiniClinic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="login" id="BYZ-38-t0r" customClass="LoginController" customModule="realmMiniClinic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Login Screen">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-GD-Bhy" userLabel="txtPassword">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-GD-Bhy" userLabel="txtUserName">
                                                         <rect key="frame" x="99" y="0.0" width="196" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +56,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R59-4x-4xX" userLabel="txtUsername">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R59-4x-4xX" userLabel="txtPassword">
                                                         <rect key="frame" x="99" y="0.0" width="196" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,6 +72,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIa-uq-26p">
                                         <rect key="frame" x="129" y="220" width="37" height="30"/>
                                         <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="credentialsEntered:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iok-sH-kig"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -105,6 +108,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="F5B-pe-j6d"/>
+                    <connections>
+                        <outlet property="passwordTextBox" destination="R59-4x-4xX" id="XR9-xJ-Abw"/>
+                        <outlet property="userNameTextBox" destination="0cn-GD-Bhy" id="hPl-lL-Vt7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,6 +159,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8S9-ot-P7q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-751.20000000000005" y="-930.58470764617698"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PRE-JG-Z3c">
+            <objects>
+                <viewController id="g6g-Sk-17S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5x7-LR-ine">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-Ln-EDB">
+                                <rect key="frame" x="0.0" y="40" width="375" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L95-cT-fVA" firstAttribute="trailing" secondItem="jFd-Ln-EDB" secondAttribute="trailing" id="Fz4-RD-XeM"/>
+                            <constraint firstItem="jFd-Ln-EDB" firstAttribute="centerX" secondItem="5x7-LR-ine" secondAttribute="centerX" id="YT8-gq-vd8"/>
+                            <constraint firstItem="jFd-Ln-EDB" firstAttribute="top" secondItem="L95-cT-fVA" secondAttribute="top" constant="20" id="hLW-YD-DRW"/>
+                            <constraint firstItem="jFd-Ln-EDB" firstAttribute="leading" secondItem="L95-cT-fVA" secondAttribute="leading" id="qxI-Y2-IK7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L95-cT-fVA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pE-gq-GAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1778" y="106"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JHk-H5-zCi">
+            <objects>
+                <viewController id="mgS-xP-UOj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiR-Jv-sly">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Patients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-A8-gu0">
+                                <rect key="frame" x="0.0" y="40" width="375" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8iK-6v-JIP" firstAttribute="trailing" secondItem="OVP-A8-gu0" secondAttribute="trailing" id="9g4-Vu-czk"/>
+                            <constraint firstItem="OVP-A8-gu0" firstAttribute="leading" secondItem="8iK-6v-JIP" secondAttribute="leading" id="pBt-FZ-xAV"/>
+                            <constraint firstItem="OVP-A8-gu0" firstAttribute="top" secondItem="8iK-6v-JIP" secondAttribute="top" constant="20" id="pyH-Xt-woa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8iK-6v-JIP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcd-9H-W5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="110"/>
         </scene>
         <!--New Patient Sign Up-->
         <scene sceneID="kP6-Lo-Xw2">
@@ -298,20 +362,45 @@
             </objects>
             <point key="canvasLocation" x="140" y="-954.87256371814101"/>
         </scene>
-        <!--View Controller-->
+        <!--Launch Controller-->
         <scene sceneID="Kej-6f-mDK">
             <objects>
-                <viewController id="69f-wK-ib7" sceneMemberID="viewController">
+                <viewController id="69f-wK-ib7" customClass="LaunchController" customModule="realmMiniClinic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a9O-yH-POP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-8W-Vig">
+                                <rect key="frame" x="60" y="297" width="256.5" height="74"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Mini Clinic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx6-iS-vMi">
+                                        <rect key="frame" x="0.0" y="0.0" width="256.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-2y-Lr0">
+                                        <rect key="frame" x="110" y="37" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.092249728739261627" green="0.08935854583978653" blue="0.68366926908493042" alpha="0.8359375" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Aex-8W-Vig" firstAttribute="centerX" secondItem="a9O-yH-POP" secondAttribute="centerX" id="Kt8-ll-uL5"/>
+                            <constraint firstItem="Aex-8W-Vig" firstAttribute="centerY" secondItem="a9O-yH-POP" secondAttribute="centerY" id="gzG-SV-vei"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xIE-Lo-WW1"/>
                     </view>
+                    <connections>
+                        <segue destination="g6g-Sk-17S" kind="show" identifier="toUserInfo" id="0J2-yY-bJj"/>
+                        <segue destination="mgS-xP-UOj" kind="show" identifier="toDoctorInfo" id="pOt-dS-iGO"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginScreen" id="mEg-ha-mj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTv-ea-hBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3540" y="-1003"/>
+            <point key="canvasLocation" x="-3540" y="-1003.4482758620691"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wHI-WN-kTE">
@@ -332,4 +421,7 @@
             <point key="canvasLocation" x="-2665" y="-904"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mEg-ha-mj4"/>
+    </inferredMetricsTieBreakers>
 </document>

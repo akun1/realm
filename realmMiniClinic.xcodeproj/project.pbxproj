@@ -12,8 +12,9 @@
 		380CF61D1FE745A60089BAF6 /* Practitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF61C1FE745A60089BAF6 /* Practitioner.swift */; };
 		380CF61F1FE745AE0089BAF6 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF61E1FE745AE0089BAF6 /* Patient.swift */; };
 		380CF6211FE745B90089BAF6 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6201FE745B90089BAF6 /* Practice.swift */; };
+		380CF6231FE8844B0089BAF6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6221FE8844B0089BAF6 /* LoginController.swift */; };
 		38C892F61FBC3FBA008842B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F51FBC3FBA008842B5 /* AppDelegate.swift */; };
-		38C892F81FBC3FBA008842B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F71FBC3FBA008842B5 /* ViewController.swift */; };
+		38C892F81FBC3FBA008842B5 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F71FBC3FBA008842B5 /* LaunchController.swift */; };
 		38C892FB1FBC3FBA008842B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C892F91FBC3FBA008842B5 /* Main.storyboard */; };
 		38C892FD1FBC3FBA008842B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C892FC1FBC3FBA008842B5 /* Assets.xcassets */; };
 		38C893001FBC3FBA008842B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C892FE1FBC3FBA008842B5 /* LaunchScreen.storyboard */; };
@@ -43,10 +44,11 @@
 		380CF61C1FE745A60089BAF6 /* Practitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practitioner.swift; sourceTree = "<group>"; };
 		380CF61E1FE745AE0089BAF6 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		380CF6201FE745B90089BAF6 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		380CF6221FE8844B0089BAF6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		38B49CFF1FC0502F001A6426 /* realmMiniClinic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = realmMiniClinic.entitlements; sourceTree = "<group>"; };
 		38C892F21FBC3FBA008842B5 /* realmMiniClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realmMiniClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C892F51FBC3FBA008842B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38C892F71FBC3FBA008842B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38C892F71FBC3FBA008842B5 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
 		38C892FA1FBC3FBA008842B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38C892FC1FBC3FBA008842B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38C892FF1FBC3FBA008842B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +130,8 @@
 		3879A42E1FBEED8000C2B1B3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				38C892F71FBC3FBA008842B5 /* ViewController.swift */,
+				38C892F71FBC3FBA008842B5 /* LaunchController.swift */,
+				380CF6221FE8844B0089BAF6 /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -501,8 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				380CF6211FE745B90089BAF6 /* Practice.swift in Sources */,
+				380CF6231FE8844B0089BAF6 /* LoginController.swift in Sources */,
 				380CF61D1FE745A60089BAF6 /* Practitioner.swift in Sources */,
-				38C892F81FBC3FBA008842B5 /* ViewController.swift in Sources */,
+				38C892F81FBC3FBA008842B5 /* LaunchController.swift in Sources */,
 				38C892F61FBC3FBA008842B5 /* AppDelegate.swift in Sources */,
 				380CF61F1FE745AE0089BAF6 /* Patient.swift in Sources */,
 			);
@@ -679,7 +683,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.akashkundu.realmMiniClinic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -696,7 +700,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.akashkundu.realmMiniClinic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
