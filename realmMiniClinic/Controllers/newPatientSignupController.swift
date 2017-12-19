@@ -1,5 +1,5 @@
 //
-//  NewPatientSignupController.swift
+//  newPatientSignupController.swift
 //  realmMiniClinic
 //
 //  Created by Akash Kundu on 12/18/17.
@@ -9,13 +9,12 @@
 import UIKit
 import RealmSwift
 
-
-
-class NewPatientSignupController: UIViewController {
+class newPatientSignupController: UIViewController {
     
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var fillEverythingError: UILabel!
+    
     @IBOutlet var patientAttrs: Array<UITextField> = []
     
     override func viewDidLoad() {
@@ -25,27 +24,18 @@ class NewPatientSignupController: UIViewController {
     
     
     @IBAction func newPatientFormComplete(_ sender: Any) {
-       
-        if (everyFieldFilled()) {
-            connectToRealm()
-        }
-    }
-    
-    func everyFieldFilled() -> Bool {
         for box in patientAttrs {
             if (box.text?.isEmpty)! {
                 fillEverythingError.isHidden = false
-                return false
+                return
             }
         }
-        return true
-    }
-    
-    func connectToRealm()
-    {
+        
+        let newPatient = Patient(attrs: patientAttrs)
         let newUserCredentials = SyncCredentials.usernamePassword(username: usernameText.text!,
                                                                   password: passwordText.text!,
-                                                                  register: true)
+                                                           register: true)
+        
         let serverURL = URL(string: "http://localhost:9080/")!
         
         SyncUser.logIn(with: newUserCredentials,
@@ -54,23 +44,22 @@ class NewPatientSignupController: UIViewController {
                             let syncServerURL = URL(string: "realm://localhost:9080/clinic")!
                             let config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: syncServerURL))
                             
+                            // Open the remote Realm
                             realm = try! Realm(configuration: config)
                             print("user created success")
-                            
-                            let newPatient = Patient(attrs: self.patientAttrs)
                             
                             try! realm?.write {
                                 realm?.add(newPatient)
                             }
                             
-                            if (realm?.isEmpty == false) {
-                                self.performSegue(withIdentifier: "patientSignupToPatient", sender: self)
-                            }
-                            
-                        } else if error != nil {
+                        } else if let error = error {
                             self.fillEverythingError.isHidden = false
-                            return
                         }
         }
+        
+        
+        
+        print("form completed")
     }
+    
 }
