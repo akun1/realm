@@ -14,7 +14,7 @@
 		380CF6211FE745B90089BAF6 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6201FE745B90089BAF6 /* Practice.swift */; };
 		380CF6231FE8844B0089BAF6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6221FE8844B0089BAF6 /* LoginController.swift */; };
 		380CF6251FE8BFC70089BAF6 /* InitSignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6241FE8BFC70089BAF6 /* InitSignupController.swift */; };
-		380CF6271FE8C2B60089BAF6 /* newPatientSignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6261FE8C2B60089BAF6 /* newPatientSignupController.swift */; };
+		380CF6271FE8C2B60089BAF6 /* NewPatientSignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CF6261FE8C2B60089BAF6 /* NewPatientSignupController.swift */; };
 		38C892F61FBC3FBA008842B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F51FBC3FBA008842B5 /* AppDelegate.swift */; };
 		38C892F81FBC3FBA008842B5 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C892F71FBC3FBA008842B5 /* LaunchController.swift */; };
 		38C892FB1FBC3FBA008842B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C892F91FBC3FBA008842B5 /* Main.storyboard */; };
@@ -48,7 +48,7 @@
 		380CF6201FE745B90089BAF6 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		380CF6221FE8844B0089BAF6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		380CF6241FE8BFC70089BAF6 /* InitSignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitSignupController.swift; sourceTree = "<group>"; };
-		380CF6261FE8C2B60089BAF6 /* newPatientSignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPatientSignupController.swift; sourceTree = "<group>"; };
+		380CF6261FE8C2B60089BAF6 /* NewPatientSignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientSignupController.swift; sourceTree = "<group>"; };
 		38B49CFF1FC0502F001A6426 /* realmMiniClinic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = realmMiniClinic.entitlements; sourceTree = "<group>"; };
 		38C892F21FBC3FBA008842B5 /* realmMiniClinic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realmMiniClinic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C892F51FBC3FBA008842B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				38C892F71FBC3FBA008842B5 /* LaunchController.swift */,
 				380CF6221FE8844B0089BAF6 /* LoginController.swift */,
 				380CF6241FE8BFC70089BAF6 /* InitSignupController.swift */,
-				380CF6261FE8C2B60089BAF6 /* newPatientSignupController.swift */,
+				380CF6261FE8C2B60089BAF6 /* NewPatientSignupController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -509,7 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380CF6271FE8C2B60089BAF6 /* newPatientSignupController.swift in Sources */,
+				380CF6271FE8C2B60089BAF6 /* NewPatientSignupController.swift in Sources */,
 				380CF6251FE8BFC70089BAF6 /* InitSignupController.swift in Sources */,
 				380CF6211FE745B90089BAF6 /* Practice.swift in Sources */,
 				380CF6231FE8844B0089BAF6 /* LoginController.swift in Sources */,
