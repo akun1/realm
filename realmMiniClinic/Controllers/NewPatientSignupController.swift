@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class newPatientSignupController: UIViewController {
+class NewPatientSignupController: UIViewController {
     
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
