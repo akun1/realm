@@ -16,6 +16,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+NewPatientSignupController.swift
 .DS_Store
 
 Pods/
