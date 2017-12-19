@@ -13,9 +13,11 @@ class LoginController: UIViewController {
 
     @IBOutlet weak var userNameTextBox: UITextField!
     @IBOutlet weak var passwordTextBox: UITextField!
+    @IBOutlet weak var badCredentialsError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.badCredentialsError.isHidden = true
         
     }
 
@@ -27,22 +29,24 @@ class LoginController: UIViewController {
                        server: serverURL) { user, error in
                         if let user = user {
                             // Create the new configuration
-                            //will create a realm belonging to user thats logged in named "test"
-                            let syncServerURL = URL(string: "realm://localhost:9080/test")!
+                            //will create a realm belonging to user thats logged in named "clinic" if "clinic" does not exist
+                            let syncServerURL = URL(string: "realm://localhost:9080/clinic")!
                             let config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: syncServerURL))
                             
                             // Open the remote Realm
-                            let realm = try! Realm(configuration: config)
+                            realm = try! Realm(configuration: config)
                             print("success")
-                            // can now open a synchronized Realm with this user
-                        } else if let error = error {
-                            print("failed")
-                            print("user: \(user)")
                             
-                            print(error)
+                            //here is where you segue to either doc or patient info after detecting
+                            //which one the logged in user is
+                            
+                        } else if let error = error {
+                            self.badCredentialsError.isHidden = false
                         }
         }
         
     }
-    // Do any additional setup after loading the view.
+    
+    
+    
 }

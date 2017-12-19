@@ -34,13 +34,13 @@ class LaunchController: UIViewController
             //has cached user, log it in and segue past login screen
             let config = Realm.Configuration(syncConfiguration: SyncConfiguration(user: user, realmURL: syncServerURL))
             //open realm w config
-            let realm = try! Realm(configuration: config)
+            realm = try! Realm(configuration: config)
             //have to check if user is patient or doc
 
             
             
             DispatchQueue.main.async() {
-                self.performSegue(withIdentifier: "toUserInfo", sender: self)
+                self.performSegue(withIdentifier: "launchToPatient", sender: self)
             }
             print("user found, success")
             
